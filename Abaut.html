@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>M.s Food about</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * { box-sizing: border-box; }
+   body {
+     margin: 0;
+     font-family: Arial, Helvetica, sans-serif;
+     background:  rgba(77, 117, 17, 0.874);
+     color: #222;
+     line-height: 1.6;
+   }
+
+ .container4 {
+   max-width: 1100px;
+   margin: 0 auto;
+   padding: 24px 16px;
+ }
+
+
+ .three-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 16px;
+ }
+
+
+ .card9 {
+   background: #e8d717;
+   border-radius: 16px;
+   overflow: hidden;
+   box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
+ }
+ .card9:hover {
+   transform: translateY(-4px);
+   box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+ }
+
+ .card9 img {
+   width: 100%;
+   height: 220px;           
+   object-fit: cover;       
+   display: block;
+ }
+
+ .card9 .content {
+   padding: 16px 14px 18px;
+ }
+
+ .card9 p {
+   margin: 0;
+   font-size: 0.95rem;
+ }
+
+ @media (max-width: 992px) {
+   .three-grid { grid-template-columns: repeat(2, 1fr); }
+ }
+ @media (max-width: 600px) {
+   .three-grid { grid-template-columns: 1fr; }
+   .card9 img { height: 200px; }
+ }
+ .hea{
+   color:gold;
+ }
+    a {
+  text-decoration: none;
+  color: blue;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+a:hover {
+  color: red;
+}
+
+ </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo-section">
+      <a href="#"><img src="picture/logoc.jpg" alt="Logo"></a>
+      <a href="#" class="logo">M.S Food</a>
+    </div>
+    <div>
+      <a href="index.html" class="link">Home</a>
+      <a href="Abaut.html" class="link">About</a>
+      <a href="Gallery.html" class="link">Gallery</a>
+      <a href="contact.html" class="link btn">Contact</a>
+    </div>
+  </div>
+  <div class="sub-navbar">
+
+    <a href="indianfood.html">Indian Food</a>
+    <a href="chainese.html">Chinese Food</a>
+    <a href="nepali.html">Nepali Food</a>
+    <a href="continental.html">Continental</a>
+    <a href="fastfood.html">Fast Food</a>
+    <a href="beveerages.html">Beverages</a>
+    <a href="desserts.html">Desserts</a>
+  
+  </div>
+
+  <hr>
+
+  <!-- Image Below Navbar -->
+  <img src="Green Yellow Modern Playful Healthy Food Presentation (1).jpg" alt="Food Presentation" class="bg">
+  <h1 align="center" class="hea"> Choose Food </h1>
+
+  <div class="container4">
+    <section class="three-grid">
+      <!-- भाग 1 -->
+      <article class="card9">
+        <img src="picture/indianfood.webp" alt="image">
+        <div class="content">
+          <a href="indianfood.html" class="od1">Indian Food</a>
+        </div>
+      </article>
+      <article class="card9">
+        <img src="picture/chinesebg.jpg" alt="image">
+        <div class="content">
+          <a href="chainese.html" class="od1">Chinese Food</a>
+        </div>
+      </article>
+      <article class="card9">
+        <img src="picture/nepalibg.avif" alt="image">
+        <div class="content">
+          <a href="nepali.html" class="od1">Nepali Food</a>
+        </div>
+      </article>
+
+      <article class="card9">
+        <img src="picture/continentalbg.webp" alt="image">
+        <div class="content">
+          <a href="continental.html" class="od1">Continental</a>
+        </div>
+      </article>
+      <article class="card9">
+        <img src="picture/fast-foodbg.webp" alt="image">
+        <div class="content">
+          <a href="fastfood.html" class="od1">Fast Food</a>
+        </div>
+      </article>
+      <article class="card9">
+        <img src="picture/beveragesbg.jpeg" alt="image">
+        <div class="content">
+          <a href="beveerages.html" class="od1">beverages</a>
+        </div>
+      </article>
+      <article class="card9">
+        <img src="picture/desertsbg.png" alt="image">
+        <div class="content">
+          <a href="desserts.html" class="od1">Desserts</a>
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Delicious Eats</h3>
+        <p>Serving mouth-watering dishes made with love and tradition. Come taste the best flavors in town!</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Abaut.html">About Us</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 Buxar, Bihar - 802125</p>
+        <p>📞 ‪+91-9006246620‬</p>
+        <p>📧 msfood1318@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Delicious Eats | Designed by Manushankar Kumar</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

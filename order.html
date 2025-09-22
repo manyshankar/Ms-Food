@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>M.S Food</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgba(77, 117, 17, 0.874);
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: rgba(77, 117, 17, 0.874);
+    }
+
+    .logo {
+      font-size: 28px;
+      color: rgb(221, 224, 38);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .navbar-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .link {
+      color: black;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .btn {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    /* Form Styling */
+    form {
+      max-width: 600px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 25px;
+      border: 3px solid black;
+      border-radius: 12px;
+    }
+
+    form label {
+      font-weight: bold;
+    }
+
+    form input[type="text"],
+    form input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    form input[type="submit"] {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #000000;
+      color: white;
+      padding: 40px 20px 20px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-container>div {
+      flex: 1 1 250px;
+    }
+
+    .footer h3,
+    .footer h4 {
+      color: orangered;
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: orange;
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      border-top: 1px solid #555;
+      padding-top: 10px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .link,
+      .btn {
+        font-size: 16px;
+      }
+
+      form {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+    /* Sub Header (second navbar) */
+  .sub-navbar {
+    background-color: #dad419;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    gap: 20px;                 
+    padding: 10px 20px;
+  }
+  .sub-navbar a {
+    color: rgb(255, 9, 9);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+  
+  .sub-navbar a:hover {
+    background-color: rgba(0, 0, 0, 0.874);
+    color: rgb(255, 0, 0);
+    border-radius: 8px;
+  }
+    
+  /* Logo side */
+  .logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo-section img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  
+  /* Dropdown */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 8px 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+    /* Show dropdown on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    /* Tablet Screen ke liye */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo-section {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  /* Sub-navbar */
+  .sub-navbar {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .sub-navbar a,
+  .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+/* Mobile Screen ke liye */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 18px;
+  }
+
+  .link {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .sub-navbar a,
+  .dropbtn {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+}  /* ✅ yaha media query close ho gaya */
+
+/* ✅ Ye global link style hai (har screen par chalega) */
+a {
+  text-decoration: none;
+  color: blue;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+a:hover {
+  color: red;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo-section">
+      <a href="#"><img src="picture/logoc.jpg" alt="Logo"></a>
+      <a href="#" class="logo">M.S Food</a>
+      </div>
+    <div class="navbar-links">
+      <a href="index.html" class="link">Home</a>
+      <a href="Abaut.html" class="link">About</a>
+      <a href="Gallery.html" class="link">Gallery</a>
+      <a href="contact.html" class="btn">Contact</a>
+    </div>
+  </div>
+  <div class="sub-navbar">
+
+    <a href="indianfood.html">Indian Food</a>
+    <a href="chainese.html">Chinese Food</a>
+    <a href="nepali.html">Nepali Food</a>
+    <a href="continental.html">Continental</a>
+    <a href="fastfood.html">Fast Food</a>
+    <a href="beveerages.html">Beverages</a>
+    <a href="desserts.html">Desserts</a>
+  
+  </div>
+  
+
+  <hr>
+
+  <!-- Order Form -->
+  <form action="order.php" method="post">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname" placeholder="Your name">
+
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname" placeholder="Last name">
+
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone" placeholder="Phone number">
+
+    <label for="house">House number:</label>
+    <input type="text" id="house" name="house" placeholder="House number">
+
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" placeholder="Address">
+
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" placeholder="City">
+
+    <label for="pin">Pin Code:</label>
+    <input type="text" id="pin" name="pin" placeholder="Pin Code">
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <hr>
+
+  <!-- Google Map -->
+  <h2 align="center">Our Location</h2>
+  <div style="text-align:center;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57669.965354679676!2d84.21405045196272!3d25.392327652376828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398d829141687bbd%3A0xb3ee0e8f1904c896!2sKesath%2C%20Bihar%20802125!5e0!3m2!1sen!2sin!4v1750667401090!5m2!1sen!2sin"
+      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Delicious Eats</h3>
+        <p>Serving mouth-watering dishes made with love and tradition. Come taste the best flavors in town!</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Abaut.html">About Us</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>📍 Buxar, Bihar - 802125</p>
+        <p>📞 +91-9006246620</p>
+        <p>📧 msfood1318@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Delicious Eats | Designed by Manushankar Kumar</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
